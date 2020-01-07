@@ -49,7 +49,7 @@ The app uses `channel-x` as the channel name.
 ## Understanding the code
 
 ### What we need
-![Image of how a call works](flow.jpg?raw=true)
+![Image of how a call works](flow.png?raw=true)
 ### permission.js
 We have permission.js to request for camera and microphone permissions from the OS on Android.
 
