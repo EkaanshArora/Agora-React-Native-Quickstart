@@ -50,11 +50,6 @@ The app uses `channel-x` as the channel name.
 
 ### What we need
 ![Image of how a call works](flow.png?raw=true)
-### permission.js
-We have permission.js to request for camera and microphone permissions from the OS on Android.
-
-### Style.js
-We have are styles for the view stored in Style.js
 
 ### Video.js
 
@@ -211,3 +206,67 @@ We define functions to start and end the call, which we do by joining and leavin
 export default Video;
 ```
 Next we define the view for our videocall, we have a button holder for our start and end call buttons. We also have a scrolling view that contains the videostreams of all the users. We use an AgoraView component, for viewing remote streams we set `remoteUid={'RemoteUidGoesHere'}`. For viewing the local user's stream we set `showLocalVideo={true}`.
+
+### permission.js
+```javascript
+import { PermissionsAndroid } from "react-native";
+/**
+ * @name requestCameraAndAudioPermission
+ * @description Function to request permission for Audio and Camera
+ */
+export default async function requestCameraAndAudioPermission() {
+	try {
+		const granted = await PermissionsAndroid.requestMultiple([
+			PermissionsAndroid.PERMISSIONS.CAMERA,
+			PermissionsAndroid.PERMISSIONS.RECORD_AUDIO,
+		]);
+		if (
+			granted["android.permission.RECORD_AUDIO"] ===
+			PermissionsAndroid.RESULTS.GRANTED &&
+			granted["android.permission.CAMERA"] ===
+			PermissionsAndroid.RESULTS.GRANTED
+		) {
+			console.log("You can use the cameras & mic");
+		} else {
+			console.log("Permission denied");
+		}
+	} catch (err) {
+		console.warn(err);
+	}
+}
+```
+We have permission.js containing an async function to request permission from the OS on Android to use the camera and microphone. 
+
+### Style.js
+```javascript
+import { StyleSheet, Dimensions } from 'react-native';
+
+let dimensions = {
+    //get dimensions of the device to use in view styles
+    width: Dimensions.get('window').width,
+    height: Dimensions.get('window').height,
+  };
+
+export default StyleSheet.create({
+    max: {
+        flex: 1,
+    },
+    buttonHolder: {
+        height: 100,
+        alignItems: 'center',
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+    },
+    button: {
+        paddingHorizontal: 20, paddingVertical: 10, backgroundColor: '#0093E9', borderRadius: 25,
+    },
+    buttonText: {
+        color: '#fff',
+    },
+    fullView: {
+        width: dimensions.width, height: dimensions.height - 130,
+    },
+});
+```
+We have the styles for the view defined in a stylesheet inside Style.js
