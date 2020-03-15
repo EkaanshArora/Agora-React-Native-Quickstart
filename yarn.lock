@@ -5158,9 +5158,9 @@ react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6:
   integrity sha512-tJBzzzIgnnRfEm046qRcURvwQnZVXmuCbscxUO5RWrGTXpon2d4c8mI0D8WE6ydVIm29JiLB6+RslkIvym9Rjw==
 
 react-native-agora@^2.9.0-alpha.1:
-  version "2.9.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/react-native-agora/-/react-native-agora-2.9.0-alpha.1.tgz#7faa1f1de77ab9239b2370040a903bea4d3849c9"
-  integrity sha512-PXY7/iFQZQkKD/m+QKEE/Le2AHJAfxKjZqODo619kN8YYapgePeqbh5vdPyrIvfYHb2ZgxiISqA6Z8CwAYzAfw==
+  version "2.9.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/react-native-agora/-/react-native-agora-2.9.0-alpha.3.tgz#796143bbbdfb755e0169b3c84928eb30c61953fb"
+  integrity sha512-Os/AdlTS2fd4c5PmVCvRnwJ5P4kTkKPQu4AZ14dWsnf12cFEOMtnuSEPTO81/NbDhQrUzQRqHXl4F1rO8v2xyA==
   dependencies:
     tslib "^1.9.3"
 
@@ -6139,10 +6139,15 @@ trim-right@^1.0.1:
   resolved "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
   integrity sha1-yy4SAwZ+DI3h9hQJS5/kVwTqYAM=
 
-tslib@^1.8.1, tslib@^1.9.0, tslib@^1.9.3:
+tslib@^1.8.1, tslib@^1.9.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
   integrity sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
+
+tslib@^1.9.3:
+  version "1.11.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.11.1.tgz#eb15d128827fbee2841549e171f45ed338ac7e35"
+  integrity sha512-aZW88SY8kQbU7gpV19lN24LtXh/yD4ZZg6qieAJDDg+YBsJcSmLGK9QpnUjAKVG/xefmvJGd1WUmfpT/g6AJGA==
 
 tsutils@^3.7.0:
   version "3.17.1"
